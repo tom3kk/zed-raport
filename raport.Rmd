@@ -221,7 +221,7 @@ dane_13 <- dane %>% dplyr::select(
 dane_13 <- na.omit(dane_13)
 
 inTraining <- 
-  createdanePartition(
+  createDataPartition(
     y = dane_13$local_res_atom_non_h_count,
     p = .70,
     list = FALSE)
@@ -270,7 +270,7 @@ dane_13 <- dane %>% dplyr::select(
 dane_13 <- na.omit(dane_13)
 
 inTraining <- 
-  createdanePartition(
+  createDataPartition(
     y = dane_13$local_res_atom_non_h_electron_sum,
     p = .70,
     list = FALSE)
