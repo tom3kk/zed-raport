@@ -316,7 +316,7 @@ dane_14 <- na.omit(dane_14)
 
 # odfiltrowanie rzadkich klas
 dane_14 %>% group_by(res_name) %>% summarize(length(local_volume))
-df <- (as.dane.frame(table(dane_14$res_name)) %>% filter(Freq >= 5))$Var1
+df <- (as.data.frame(table(dane_14$res_name)) %>% filter(Freq >= 5))$Var1
 df <- as.character(df)
 dane_14 <- dane_14 %>% filter(res_name %in% df)
 
