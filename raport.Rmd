@@ -338,7 +338,7 @@ gridCtrl <- trainControl(
   repeats = 1)
 
 rfFit <- train(res_name~., 
-               dane=training, 
+               data=training, 
                method="rf", 
                trControl = gridCtrl,
                ntree=20)
